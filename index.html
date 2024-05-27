@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Goal Tracker</h1>
+        <form id="goal-form">
+            <input type="text" id="title" placeholder="Enter goal title" required>
+            <textarea id="description" placeholder="Enter goal description" required></textarea>
+            <input type="date" id="deadline" required>
+            <button type="submit" id="addGoalBtn">Add Goal</button>
+        </form>
+        <div id="goal-list"></div>
+    </div>
+
+    
+    <div id="editGoalModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Goal</h2>
+            <form id="editGoalForm">
+                <input type="text" id="newTitle" placeholder="Enter new title" required>
+                <textarea id="newDescription" placeholder="Enter new description" required></textarea>
+                <input type="date" id="newDeadline" required>
+                <button type="submit">Save Changes</button>
+                <button type="button" id="cancelEditBtn">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
